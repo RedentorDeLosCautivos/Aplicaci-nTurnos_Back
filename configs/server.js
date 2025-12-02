@@ -51,10 +51,10 @@ export const initServer = () => {
     conectarDB();
     routes(app);
     defaultUser();
-    cron.schedule("0 0 * * *", async () => {
+    /* cron.schedule("0 0 * * *", async () => {
       console.log("Verificando procesiones vencidas...");
       await verificarFechaProcesion();
-    });
+    });*/
     app.listen(process.env.PORT, () => {
       console.log(`Server running on port ${process.env.PORT}`);
     });
